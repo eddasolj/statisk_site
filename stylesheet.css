@@ -3,18 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+/********************** Kategori ************************/
+
 .kategori_list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 15rem;
+  gap: 6rem;
   margin: 2rem;
   padding: 5rem;
 }
-.kategori_list,
-a {
+.kategori_list_item {
   border: 1px solid black;
-  padding: 1rem;
+  padding: 7rem;
   text-align: center;
-  gap: 5rem;
+  background-color: rgb(255, 170, 0);
 }
+
+/********************** Produktliste ************************/
