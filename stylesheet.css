@@ -1,9 +1,20 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 .kategori_list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15rem;
+  margin: 2rem;
+  padding: 5rem;
+}
+.kategori_list,
+a {
+  border: 1px solid black;
+  padding: 1rem;
+  text-align: center;
+  gap: 5rem;
 }
