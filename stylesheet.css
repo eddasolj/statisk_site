@@ -3,18 +3,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+/********************** H-elemenst / Text  ************************/
+
+h1 {
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
 /********************** Kategori ************************/
 
 .kategori_list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 6rem;
+  gap: 3rem;
   margin: 2rem;
-  padding: 5rem;
 }
 .kategori_list_item {
-  border: 1px solid black;
+  border: 5px solid black;
   padding: 7rem;
   text-align: center;
   background-color: rgb(255, 170, 0);
