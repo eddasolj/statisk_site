@@ -26,17 +26,21 @@ h1 {
   background-color: rgb(255, 170, 0);
 }
 
-/********************** Produktliste ************************/
+/********************** Produkt ************************/
+.product_grid {
+  margin: 2rem;
+}
 @media (min-width: 800px) {
-  #product_grid {
+  .product_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 1%;
+    padding: 1rem;
   }
-  #product_img {
+  .product_img {
     grid-column: 1 / span 2;
   }
-  #product_text {
+  .product_text {
     grid-column: 3;
   }
 }
+/********************** Produktliste ************************/
