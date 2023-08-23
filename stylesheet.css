@@ -27,3 +27,16 @@ h1 {
 }
 
 /********************** Produktliste ************************/
+@media (min-width: 800px) {
+  #product_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1%;
+  }
+  #product_img {
+    grid-column: 1 / span 2;
+  }
+  #product_text {
+    grid-column: 3;
+  }
+}
