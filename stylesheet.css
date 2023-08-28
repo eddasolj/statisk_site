@@ -44,3 +44,23 @@ h1 {
   }
 }
 /********************** Produktliste ************************/
+.Product {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 5%;
+  background-color: pink;
+}
+
+img {
+  width: 20vw;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.soldOut2 {
+  display: none;
+}
+.soldOut .soldOut2 {
+  display: block;
+  background-color: red;
+}
