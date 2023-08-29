@@ -44,17 +44,24 @@ h1 {
   }
 }
 /********************** Produktliste ************************/
-.Product {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 5%;
-  background-color: pink;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-img {
-  width: 20vw;
-  aspect-ratio: 1/1;
-  object-fit: cover;
+main {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 180px);
+  gap: 1rem;
+}
+
+.Product {
+  border: 1px solid rgb(0, 0, 0);
+  padding: 4%;
+  background-color: rgba(178, 232, 255, 0.801);
 }
 
 .soldOut2 {
