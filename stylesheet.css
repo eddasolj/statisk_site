@@ -27,6 +27,13 @@ h1 {
 }
 
 /********************** Produkt ************************/
+main {
+  transition: opacity 0.5s;
+}
+
+.hidden {
+  opacity: 0;
+}
 /********************** Produktliste ************************/
 img {
   max-width: 100%;
