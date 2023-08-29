@@ -58,7 +58,7 @@ main {
 .soldOut2 {
   display: none;
 }
-.soldOut .soldOut2 {
+.soldOut.soldOut2 {
   display: block;
   background-color: red;
 }

@@ -1,28 +1,39 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 
+const productDetailTemplate = document.querySelector("#ProductDetailTemplate").content;
+
 fetch("https://kea-alt-del.dk/t7/api/products/" + id)
   .then((response) => response.json())
   .then((data) => showProduct(data));
 
 function showProduct(product) {
-  console.log(product);
   const productImg = document.querySelector(".product_img img");
   const productText = document.querySelector(".product_text");
 
   productImg.src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
 
-  const priceText = document.createElement("h3");
+  const productDetailCopy = productDetailTemplate.cloneNode(true);
+
+  //Price
+  const priceText = productDetailCopy.querySelector("h3");
   priceText.textContent = `Price: DKK ${product.price}`;
-  productText.appendChild(priceText);
 
-  const sizeText = document.createElement("h4");
-  sizeText.textContent = `Size: ${product.size}`;
-  productText.appendChild(sizeText);
+  //Discount Final Price
+  const total = product.price - (product.price / 100) * product.discount;
+  productDetailCopy.querySelector(".finalprice").textContent = total;
 
-  const stockText = document.createElement("h4");
-  stockText.textContent = `In Stock: ${product.stock}`;
-  productText.appendChild(stockText);
+  //Brand
+  const brandText = productDetailCopy.querySelector(".brand");
+  brandText.textContent = `Brand: ${product.brandname}`;
 
-  // Add more lines here to populate other information like category, brand, etc.
+  //Category
+  const categoryText = productDetailCopy.querySelector(".category");
+  categoryText.textContent = `Category: ${product.articletype}`;
+
+  //Udsolgt produkt
+  if (product.soldout) {
+    productDetailCopy.querySelector(".soldOut2").classList.add("soldOut");
+  }
+  productText.appendChild(productDetailCopy);
 }
