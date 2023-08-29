@@ -70,18 +70,6 @@ main {
 
 /********************** discount ************************/
 
-.discounted2 {
-  display: none;
-}
-.discounted.discounted2 {
-  display: block;
-  background-color: greenyellow;
-}
-.discounted img,
-.discounted2 img {
-  opacity: 0.3;
-}
-
 /********************** nav ************************/
 
 .nav_menu {
