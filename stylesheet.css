@@ -71,6 +71,10 @@ main {
   display: block;
   background-color: red;
 }
+.soldOut img,
+.soldOut2 img {
+  opacity: 0.3;
+}
 
 /********************** nav ************************/
 
