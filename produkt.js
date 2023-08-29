@@ -19,10 +19,6 @@ function showProduct(product) {
   const priceText = productDetailCopy.querySelector("h3");
   priceText.textContent = `Price: DKK ${product.price}`;
 
-  //Discount Final Price
-  const total = product.price - (product.price / 100) * product.discount;
-  productDetailCopy.querySelector(".finalprice").textContent = total;
-
   //Brand
   const brandText = productDetailCopy.querySelector(".brand");
   brandText.textContent = `Brand: ${product.brandname}`;
@@ -36,4 +32,12 @@ function showProduct(product) {
     productDetailCopy.querySelector(".soldOut2").classList.add("soldOut");
   }
   productText.appendChild(productDetailCopy);
+
+  //Discount Final Price
+  if (product.discount) {
+    productDetailCopy.querySelector(".discounted2").classList.add("discounted");
+  }
+  productText.appendChild(productDetailCopy);
+  const total = product.price - (product.price / 100) * product.discount;
+  productDetailCopy.querySelector(".finalprice").textContent = total;
 }
