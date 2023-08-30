@@ -12,19 +12,20 @@ h1 {
 }
 
 /********************** Kategori ************************/
-
-.kategori_list {
+.categorylist {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 3rem;
-  margin: 2rem;
+  grid-template-columns: repeat(auto-fill, 280px);
+  margin: 3%;
 }
-.kategori_list_item {
-  border: 5px solid black;
-  padding: 7rem;
+.category {
+  border: 2px solid #323232;
+  padding: 20%;
+  background-color: #ddd0c8;
+}
+a.category {
+  color: #000000;
+  text-decoration: none;
   text-align: center;
-  background-color: rgb(255, 170, 0);
 }
 
 /********************** Produkt ************************/
