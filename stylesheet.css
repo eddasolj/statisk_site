@@ -51,9 +51,9 @@ main {
 }
 
 .Product {
-  border: 1px solid rgb(0, 0, 0);
+  border: 2px solid #323232;
   padding: 4%;
-  background-color: rgba(178, 232, 255, 0.801);
+  background-color: #ddd0c8;
 }
 
 .soldOut2 {
@@ -74,7 +74,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
+  background-color: #323232;
   padding: 20px;
   position: relative;
   font-weight: 400;
@@ -97,7 +97,7 @@ main {
   display: block;
   padding: 20px;
   text-decoration: none;
-  color: white;
+  color: #ddd0c8;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 300;
   font-style: normal;

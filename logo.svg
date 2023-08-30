@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 182.5 103.07">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ddd0c8;
+      }
+
+      .cls-2 {
+        font-family: Verdana-BoldItalic, Verdana;
+        font-size: 51.08px;
+        font-style: italic;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <rect class="cls-1" x=".25" y=".25" width="182" height="102.1" rx="10.14" ry="10.14"/>
+      <path d="m172.12.5c5.45,0,9.89,4.43,9.89,9.89v81.83c0,5.45-4.43,9.89-9.89,9.89H10.39c-5.45,0-9.89-4.43-9.89-9.89V10.39C.5,4.93,4.93.5,10.39.5h161.73m0-.5H10.39C4.65,0,0,4.65,0,10.39v81.83c0,5.74,4.65,10.39,10.39,10.39h161.73c5.74,0,10.39-4.65,10.39-10.39V10.39c0-5.74-4.65-10.39-10.39-10.39h0Z"/>
+    </g>
+    <text class="cls-2" transform="translate(8.73 46.1) scale(.55 1)"><tspan x="0" y="0">Online </tspan><tspan x="0" y="41.48" xml:space="preserve">         Shop</tspan></text>
+  </g>
+</svg>
