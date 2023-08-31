@@ -37,6 +37,10 @@ function showProduct(product) {
   const brandText = productDetailCopy.querySelector(".brand");
   brandText.textContent = `Brand: ${product.brandname}`;
 
+  //Season
+  const seasonText = productDetailCopy.querySelector(".season");
+  seasonText.textContent = `Season: ${product.season}`;
+
   //Category
   const categoryText = productDetailCopy.querySelector(".category");
   categoryText.textContent = `Category: ${product.articletype}`;
