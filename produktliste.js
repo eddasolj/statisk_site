@@ -17,15 +17,31 @@ function showProduct(product) {
   //lav en kopi
   const copy = template.cloneNode(true);
 
-  const total = product.price - (product.price / 100) * product.discount;
-  console.log(total);
+  // DISCOUNT
+  const price = product.price;
+  const discount = product.discount;
+  let finalPrice = price;
+
+  if (discount && discount !== 0) {
+    finalPrice = price - (price * discount) / 100;
+    // Change the HTML to display discount and final price
+    copy.querySelector(".discounted").style.display = "block";
+    copy.querySelector(".discounted p:nth-child(2)").textContent = `${discount}% off`;
+    copy.querySelector(".finalprice").textContent = `Now DKK ${finalPrice.toFixed(0)},-`;
+  } else {
+    // Hide the discount section when there's no discount
+    copy.querySelector(".discounted").style.display = "none";
+  }
+
+  // Round the total to a whole number
+  const total = Math.round(product.price - (product.price / 100) * product.discount);
 
   //ændre indhold
   copy.querySelector("h3").textContent = product.productdisplayname;
   copy.querySelector(".articletype").textContent = product.articletype;
   copy.querySelector(".brandname").textContent = product.brandname;
   copy.querySelector(".price span").textContent = product.price;
-  copy.querySelector(".finalprice").textContent = total;
+  copy.querySelector(".finalprice").textContent = `Now DKK ${total},-`;
   copy.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
   //Udsolgt produkt
   if (product.soldout) {

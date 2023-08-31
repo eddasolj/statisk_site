@@ -19,9 +19,19 @@ function showProduct(product) {
   const priceText = productDetailCopy.querySelector("h3");
   priceText.textContent = `Price: DKK ${product.price}`;
 
-  //Discount Final Price
-  const total = product.price - (product.price / 100) * product.discount;
-  productDetailCopy.querySelector(".finalprice").textContent = total;
+  // Discount
+  const discount = product.discount || 0;
+  const total = Math.round(product.price - (product.price / 100) * product.discount);
+
+  if (discount > 0) {
+    const discountSection = productDetailCopy.querySelector(".discounted");
+    discountSection.style.display = "block";
+    discountSection.querySelector("p:nth-child(2)").textContent = `-${discount}%`;
+    productDetailCopy.querySelector(".finalprice").textContent = `Now DKK ${total},-`;
+  } else {
+    productDetailCopy.querySelector(".discounted").style.display = "none";
+    productDetailCopy.querySelector(".finalprice").textContent = `Now DKK ${product.price},-`;
+  }
 
   //Brand
   const brandText = productDetailCopy.querySelector(".brand");
