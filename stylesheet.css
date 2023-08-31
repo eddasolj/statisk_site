@@ -33,6 +33,10 @@ main {
   opacity: 0;
 }
 /********************** Produktliste ************************/
+a.read_more {
+  text-decoration: none;
+  color: darkgreen;
+}
 img {
   max-width: 100%;
   height: auto;
@@ -51,6 +55,7 @@ main {
   border: 2px solid #323232;
   padding: 4%;
   background-color: #ddd0c8;
+  margin: 3%;
 }
 
 .soldOut2 {
