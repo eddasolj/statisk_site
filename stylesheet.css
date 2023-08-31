@@ -25,6 +25,13 @@ a.category {
   color: #000000;
 }
 /********************** Produkt ************************/
+
+.product_img img {
+  width: 30vw;
+  object-fit: cover;
+  margin-top: 3%;
+}
+
 main {
   transition: opacity 0.5s;
 }
@@ -37,7 +44,7 @@ a.read_more {
   text-decoration: none;
   color: darkgreen;
 }
-img {
+.Product img {
   max-width: 100%;
   height: auto;
   display: block;
